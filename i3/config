@@ -76,14 +76,14 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # 6.7.1. Named workspaces
-set $WS0   "0:Slack"
-set $WS1   "1:Thunder"
+set $WS0   "0:Chat"
+set $WS1   "1:Email"
 set $WS2   "2:Documents"
 set $WS3   "3:Code"
 set $WS4   "4:Tools"
 set $WS5   "5:Media"
 set $WS6   "6:Free"
-set $WS7   "7:Krusader"
+set $WS7   "7:Files"
 set $WS8   "8:Browser"
 set $WS9   "9:Shell"
 
@@ -159,11 +159,6 @@ bar {
 	position top
 }
 
-# NM_APPLET
-# exec --no-startup-id nm-applet
-
-# exec --no-startup-id gnome-settings-daemon
-
 # pulse audio volume control
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 0 -- '-5%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 0 -- '+5%'
@@ -174,7 +169,7 @@ bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # screen locker (first move to "safe" workspace without any chat app)
-bindsym $mod+Control+l exec i3-msg workspace $WS0 && i3lock -i /home/zoltan/screensaver.png -d
+bindsym $mod+Control+l exec i3-msg workspace $WS0 && i3lock -i /home/z/screensaver.png -d
 
 # Screens
 # exec xrandr --output DVI-1 --rotate right
@@ -183,11 +178,3 @@ exec xrandr --output DP-2-1 --rotate left --left-of eDP-1
 
 # keyboard repeat delay rate
 exec xset r rate 200 25
-
-# keyboard layout
-# exec setxkbmap -variant cmk_ed_us -option misc:extend,lv5:caps_switch_lock
-
-# Start applications
-# exec --no-startup-id i3-msg 'workspace 2:Hipchat; exec hipchat4
-# exec --no-startup-id i3-msg 'workspace 9:Browser; exec firefox
-exec /z/init_tmux.py
