@@ -44,10 +44,8 @@ bindsym $mod+d exec dmenu_run
 
 # change focus
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # mouse focus
 focus_follows_mouse no
@@ -98,6 +96,10 @@ bindsym $mod+6 workspace $WS6
 bindsym $mod+7 workspace $WS7
 bindsym $mod+8 workspace $WS8
 bindsym $mod+9 workspace $WS9
+
+bindsym $mod+n workspace back_and_forth
+bindsym $mod+Left workspace prev
+bindsym $mod+Right workspace next
 
 # move focused container to workspace
 bindsym $mod+Shift+0 move container to workspace $WS0

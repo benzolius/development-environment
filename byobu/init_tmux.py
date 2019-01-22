@@ -31,8 +31,6 @@ subprocess.call(['byobu-tmux', 'new-window', '-t', 'pink', '-n', 'search'])
 subprocess.call(['byobu-tmux', 'new-window', '-t', 'pink', '-n', 'test'])
 
 # subprocess.call('byobu-tmux send-keys -t log "xrandr --output eDP-1 --off" ENTER', shell=True)
-subprocess.call('byobu-tmux send-keys -t log "setxkbmap -layout us" ENTER', shell=True)
-subprocess.call('byobu-tmux send-keys -t log "setxkbmap -variant norman -option misc:extend,lv5:caps_switch_lock" ENTER', shell=True)
 subprocess.call('byobu-tmux send-keys -t log "nohup firefox &" ENTER', shell=True)
 subprocess.call('byobu-tmux send-keys -t log "pwd" ENTER', shell=True)
 
